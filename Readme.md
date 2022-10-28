@@ -1,5 +1,8 @@
 # rework [![Build Status](https://travis-ci.org/reworkcss/rework.png)](https://travis-ci.org/reworkcss/rework)
 
+> ### Forked Version using updated dependencies and dropped sourceMap support
+> Original repo at https://github.com/reworkcss/rework
+
 CSS manipulations built on [`css`](https://github.com/reworkcss/css), allowing
 you to automate vendor prefixing, create your own properties, inline images,
 anything you can imagine!
@@ -21,7 +24,7 @@ var pluginB = require('pluginB');
 rework('body { font-size: 12px; }', { source: 'source.css' })
   .use(pluginA)
   .use(pluginB)
-  .toString({ sourcemap: true })
+  .toString()
 ```
 
 ## API
@@ -40,10 +43,6 @@ stylesheet root node and the `Rework` instance.
 
 Returns the string representation of the manipulated CSS. The `options` are
 passed directly to `css.stringify`.
-
-Unlike `css.stringify`, if you pass `sourcemap: true` a string will still be
-returned, with the source map inlined. Also use `sourcemapAsObject: true` if
-you want the `css.stringify` return value.
 
 ## Plugins
 

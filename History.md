@@ -1,3 +1,9 @@
+2.0.0 / 2022-10-28
+==================
+
+* Switched from `css` to `@adobe/css-tools` which in turn drops deprecated sourceMap support
+* updated dependencies.
+
 1.0.1 / 2014-08-28
 ==================
 

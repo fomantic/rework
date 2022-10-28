@@ -3,8 +3,7 @@
  * Module dependencies.
  */
 
-var css = require('css');
-var convertSourceMap = require('convert-source-map');
+var css = require('@adobe/css-tools');
 var parse = css.parse;
 var stringify = css.stringify;
 
@@ -62,21 +61,6 @@ Rework.prototype.use = function(fn){
 Rework.prototype.toString = function(options){
   options = options || {};
   var result = stringify(this.obj, options);
-  if (options.sourcemap && !options.sourcemapAsObject) {
-    result = result.code + '\n' + sourcemapToComment(result.map);
-  }
   return result;
 };
 
-/**
- * Convert sourcemap to base64-encoded comment
- *
- * @param {Object} map
- * @return {String}
- * @api private
- */
-
-function sourcemapToComment(map) {
-  var content = convertSourceMap.fromObject(map).toBase64();
-  return '/*# sourceMappingURL=data:application/json;base64,' + content + ' */';
-}
