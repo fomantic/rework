@@ -7,7 +7,7 @@
     "index.js"
   ],
   "dependencies": {
-    "@adobe/css-tools": "^4.0.1"
+    "@adobe/css-tools": "4.2.0"
   },
   "devDependencies": {
     "mocha": "^9.2.2",
