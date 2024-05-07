@@ -1,3 +1,8 @@
+2.1.0 / 2024-05-07
+==================
+
+* Lock css-tool dependency version to still support node 12
+
 2.0.0 / 2022-10-28
 ==================
 
