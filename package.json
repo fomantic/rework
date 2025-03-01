@@ -7,14 +7,17 @@
     "index.js"
   ],
   "dependencies": {
-    "@adobe/css-tools": "4.2.0"
+    "@adobe/css-tools": "^4.4.2"
   },
   "devDependencies": {
-    "mocha": "^9.2.2",
+    "mocha": "^11.1.0",
     "should": "^13.2.3"
   },
   "scripts": {
     "test": "mocha --require should --reporter spec"
+  },
+  "engines": {
+    "node": ">=18.18.0"
   },
   "keywords": [
     "css",
